@@ -157,6 +157,10 @@ document.addEventListener('DOMContentLoaded', () => {
         pageLanding.classList.add('hidden');
         pageMain.classList.remove('hidden');
         pageMain.classList.add('active');
+        document.body.classList.add('page-two-active');
+        if (window.spacetimeEngine) {
+          window.spacetimeEngine.setPage2Active(true);
+        }
         if (replaySingularityBtn) replaySingularityBtn.classList.remove('hidden');
         window.scrollTo({ top: 0, behavior: 'instant' });
         if (supernovaOverlay) supernovaOverlay.classList.remove('active');

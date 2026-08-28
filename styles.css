@@ -29,11 +29,19 @@
   --text-secondary: #94A3B8;
   --text-muted: #64748B;
 
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-display: 'Space Grotesk', 'Inter', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-  --font-cinematic: 'Cinzel', 'Space Grotesk', serif;
+  --font-sans: 'Geist Sans', sans-serif;
+  --font-display: 'Geist Sans', sans-serif;
+  --font-mono: 'Geist Sans', sans-serif;
+  --font-cinematic: 'Geist Sans', sans-serif;
 
+
+@font-face {
+  font-family: 'Geist Sans';
+  src: url('https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/Geist-Variable.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
   /* Curves & Metrics */
   --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -109,7 +117,7 @@ body {
 body.page-two-active .spacetime-canvas {
   z-index: 11;
   background: transparent;
-  opacity: 0.46;
+  opacity: 0.58;
   mix-blend-mode: screen;
 }
 
@@ -591,6 +599,55 @@ body.page-two-active .spacetime-canvas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.8rem;
+}
+
+.github-connect-link {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  width: fit-content;
+  margin: 2rem auto 0;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.github-connect-link:hover,
+.github-connect-link:focus-visible {
+  color: var(--solar-yellow);
+  text-shadow: 0 0 14px rgba(255, 215, 0, 0.55);
+}
+
+.github-connect-label {
+  position: relative;
+}
+
+.github-connect-label::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.35rem;
+  height: 1px;
+  background: linear-gradient(90deg, var(--fiery-orange), var(--solar-yellow));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s ease;
+}
+
+.github-connect-link:hover .github-connect-label::after,
+.github-connect-link:focus-visible .github-connect-label::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.github-logo {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
 }
 
 .status-card-3d {
