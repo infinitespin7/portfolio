@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soumyadip Sarkar | AI/ML Aspirant & Cosmic Portfolio</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23040406'/><circle cx='50' cy='50' r='32' fill='%23D84315' filter='blur(3px)'/><circle cx='50' cy='50' r='20' fill='%23000000'/><circle cx='50' cy='50' r='21' fill='none' stroke='%23F59E0B' stroke-width='1.5'/></svg>" />
+
+  <!-- Google Fonts: Cinzel, Space Grotesk, JetBrains Mono, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-dark">
+
+  <!-- Interactive Spacetime Gravitational Distortion Canvas (Grid, Stars, Black Body, Rocks & Orbiting Pluto) -->
+  <canvas id="spacetime-canvas" class="spacetime-canvas"></canvas>
+
+  <!-- Film Grain Texture -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Minimalist HUD Header -->
+  <header class="hud-header">
+    <div class="hud-brand">
+      <span class="hud-monogram">SS</span>
+      <span class="hud-title">EVENT HORIZON // AI & ML</span>
+    </div>
+    
+    <div class="hud-actions">
+      <!-- Audio Toggle Button -->
+      <button id="audio-toggle-btn" class="hud-btn audio-btn" title="Toggle Cinematic Soundscape" aria-label="Toggle Audio">
+        <span class="audio-pulse-indicator"></span>
+        <span class="hud-btn-text">SOUNDSCAPE: <span id="audio-status">OFF</span></span>
+      </button>
+
+      <!-- Replay Landing Page / Singularity Button -->
+      <button id="replay-singularity-btn" class="hud-btn replay-btn hidden" title="Return to Event Horizon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+          <path d="M3 3v5h5"></path>
+        </svg>
+        <span class="hud-btn-text">SINGULARITY</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- PAGE 1: LANDING EXPERIENCE (Spacetime Singularity)       -->
+  <!-- ======================================================== -->
+  <main id="page-landing" class="page-container page-landing active">
+    
+    <!-- Cinematic Interstellar-format CTA (Wide letterspaced, anamorphic flare) -->
+    <div id="cta-beacon" class="cinematic-cta-wrap" aria-live="polite">
+      <div class="cinematic-flare-line"></div>
+      <span class="cinematic-cta-text">CLICK ANYWHERE TO PROCEED</span>
+      <div class="cinematic-flare-line right"></div>
+    </div>
+
+    <!-- Hero Content Grid -->
+    <div class="landing-grid">
+      
+      <!-- LEFT: Precision Typewriter Intro (Emits Faint Warm Light) -->
+      <div class="landing-text-col">
+        
+        <!-- Clean Monospace System Terminal Readout -->
+        <div class="terminal-meta-tag faint-light">
+          <span class="term-status-dot"></span>
+          <span class="term-text">SOUMYADIP SARKAR // 1ST YEAR B.TECH CSE</span>
+        </div>
+
+        <!-- Main Heading with Typewriter Visual -->
+        <div class="intro-box">
+          <div class="intro-prompt-prefix faint-light">>_ user.identity</div>
+          <h1 id="typewriter-text" class="typewriter-heading faint-light" aria-label="Hi, I'm Soumyadip Sarkar, a tech enthusiast and an aspiring ML/AI engineer currently studying in 1st year">
+            <!-- Populated letter-by-letter via JavaScript -->
+          </h1>
+          <span id="typewriter-cursor" class="typewriter-cursor" aria-hidden="true"></span>
+        </div>
+
+        <!-- Cinematic Sub-Telemetry -->
+        <div id="landing-meta" class="landing-meta faint-light">
+          <div class="meta-item">
+            <span class="meta-icon">✦</span>
+            <span>CORE FOCUS: <strong>ARTIFICIAL INTELLIGENCE & NEURAL SYSTEMS</strong></span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Interactive Spacetime Black Body Visual Area -->
+      <div class="landing-visual-col" id="blackhole-trigger-zone">
+        <div class="blackhole-wrapper" id="blackhole-container">
+          <!-- Rendered on spacetime-canvas -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Cinematic Cue -->
+    <div class="landing-footer-hint faint-light">
+      <span>[ SPACETIME CONTINUUM // CLICK TO WARP EVENT HORIZON ]</span>
+    </div>
+
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- CINEMATIC ENGULFING SHOCKWAVE OVERLAY                    -->
+  <!-- ======================================================== -->
+  <div id="supernova-overlay" class="supernova-overlay" aria-hidden="true">
+    <div class="supernova-glow-layer"></div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- PAGE 2: MAIN CONTENT LAYOUT (Vercel Precision Design)     -->
+  <!-- ======================================================== -->
+  <div id="page-main" class="page-container page-main hidden">
+    
+    <div class="main-content-wrapper">
+
+      <!-- ==================================================== -->
+      <!-- 1. STATUS CARDS SECTION (Dynamic Spotlight Glass)     -->
+      <!-- ==================================================== -->
+      <section class="section-container status-section" id="status-section">
+        <div class="section-header">
+          <div class="section-tag">
+            <span class="section-num">01</span>
+            <span class="section-tag-line"></span>
+            <span class="section-tag-name">ACTIVE DIRECTIVES</span>
+          </div>
+          <h2 class="section-title faint-light">Current Explorations & Focus</h2>
+          <p class="section-subtitle">Click each quantum node to decrypt current learning payloads</p>
+        </div>
+
+        <div class="cards-grid">
+          
+          <!-- CARD 1: Python -->
+          <div class="status-card-3d" data-card="1" tabindex="0" role="button" aria-expanded="false" aria-label="Card 1: Learning Python">
+            <div class="card-inner">
+              
+              <!-- Front Face -->
+              <div class="card-face card-front">
+                <div class="card-spotlight-layer"></div>
+                
+                <div class="card-top-bar">
+                  <span class="card-chip">NODE // 01</span>
+                  <span class="card-status-indicator"><span class="pulse-dot"></span>ACTIVE</span>
+                </div>
+
+                <div class="card-front-center">
+                  <div class="card-front-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="16 18 22 12 16 6"></polyline>
+                      <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                  </div>
+                  <div class="card-front-text">Tap to open card</div>
+                  <div class="card-front-sub">CORE_LANGUAGE_ENGINE</div>
+                </div>
+
+                <div class="card-bottom-bar">
+                  <span class="card-action-cue">REVEAL PAYLOAD <span>→</span></span>
+                </div>
+              </div>
+
+              <!-- Back Face (Revealed) -->
+              <div class="card-face card-back">
+                <div class="card-spotlight-layer"></div>
+                
+                <div class="card-top-bar">
+                  <span class="card-chip highlight">PYTHON // FOUNDATION</span>
+                  <span class="card-close-btn" title="Close card">✕</span>
+                </div>
+
+                <div class="card-back-content">
+                  <div class="revealed-header">
+                    <span class="revealed-icon">🐍</span>
+                    <h3 class="revealed-title">Currently learning Python</h3>
+                  </div>
+                  <p class="revealed-description">
+                    Mastering core data structures, writing performant algorithms, exploring OOP paradigms, and building numerical foundations with NumPy.
+                  </p>
+                  <div class="code-preview">
+                    <code><span class="kw">import</span> numpy <span class="kw">as</span> np<br/><span class="kw">def</span> <span class="fn">ignite_journey</span>():<br/>&nbsp;&nbsp;<span class="kw">return</span> <span class="str">"Building solid foundations daily"</span></code>
+                  </div>
+                </div>
+
+                <div class="card-bottom-bar back-bar">
+                  <span class="badge-mini highlight">1ST YEAR CSE</span>
+                  <span class="badge-mini">FOUNDATION_READY</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- CARD 2: Maths for ML -->
+          <div class="status-card-3d" data-card="2" tabindex="0" role="button" aria-expanded="false" aria-label="Card 2: Maths for Machine Learning">
+            <div class="card-inner">
+              
+              <!-- Front Face -->
+              <div class="card-face card-front">
+                <div class="card-spotlight-layer"></div>
+                
+                <div class="card-top-bar">
+                  <span class="card-chip">NODE // 02</span>
+                  <span class="card-status-indicator"><span class="pulse-dot"></span>ACTIVE</span>
+                </div>
+
+                <div class="card-front-center">
+                  <div class="card-front-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M8 12h8"></path>
+                      <path d="M12 8v8"></path>
+                    </svg>
+                  </div>
+                  <div class="card-front-text">Tap to open card</div>
+                  <div class="card-front-sub">MATHEMATICAL_CORE</div>
+                </div>
+
+                <div class="card-bottom-bar">
+                  <span class="card-action-cue">REVEAL PAYLOAD <span>→</span></span>
+                </div>
+              </div>
+
+              <!-- Back Face (Revealed) -->
+              <div class="card-face card-back">
+                <div class="card-spotlight-layer"></div>
+                
+                <div class="card-top-bar">
+                  <span class="card-chip highlight">ML // MATHEMATICS</span>
+                  <span class="card-close-btn" title="Close card">✕</span>
+                </div>
+
+                <div class="card-back-content">
+                  <div class="revealed-header">
+                    <span class="revealed-icon">📐</span>
+                    <h3 class="revealed-title">Learning Maths for ML</h3>
+                  </div>
+                  <p class="revealed-description">
+                    Demystifying the underlying mechanics of AI: Linear Algebra, Vector Calculus, Probability & Optimization algorithms like Gradient Descent.
+                  </p>
+                  <div class="math-formula-box">
+                    <div class="formula-line">\(\mathbf{W}_{t+1} = \mathbf{W}_t - \eta \nabla L(\mathbf{W}_t)\)</div>
+                    <div class="formula-caption">Gradient Descent Optimization & Backpropagation</div>
+                  </div>
+                </div>
+
+                <div class="card-bottom-bar back-bar">
+                  <span class="badge-mini">ALGEBRA + CALCULUS</span>
+                  <span class="badge-mini highlight">DEEP ROOTS</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- CARD 3: YouTube & Attendance -->
+          <div class="status-card-3d" data-card="3" tabindex="0" role="button" aria-expanded="false" aria-label="Card 3: Tech Videos & Attendance">
+            <div class="card-inner">
+              
+              <!-- Front Face -->
+              <div class="card-face card-front">
+                <div class="card-spotlight-layer"></div>
+                
+                <div class="card-top-bar">
+                  <span class="card-chip">NODE // 03</span>
+                  <span class="card-status-indicator"><span class="pulse-dot"></span>ACTIVE</span>
+                </div>
+
+                <div class="card-front-center">
+                  <div class="card-front-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                  </div>
+                  <div class="card-front-text">Tap to open card</div>
+                  <div class="card-front-sub">LIFESTYLE_BALANCE</div>
+                </div>
+
+                <div class="card-bottom-bar">
+                  <span class="card-action-cue">REVEAL PAYLOAD <span>→</span></span>
+                </div>
+              </div>
+
+              <!-- Back Face (Revealed) -->
+              <div class="card-face card-back">
+                <div class="card-spotlight-layer"></div>
+                
+                <div class="card-top-bar">
+                  <span class="card-chip highlight">TECH & REALITY</span>
+                  <span class="card-close-btn" title="Close card">✕</span>
+                </div>
+
+                <div class="card-back-content">
+                  <div class="revealed-header">
+                    <span class="revealed-icon">⚡</span>
+                    <h3 class="revealed-title">Watching a lot of YouTube videos about tech :) and trying to maintain 75% attendance in college :(</h3>
+                  </div>
+                  <p class="revealed-description card-highlight-desc">
+                    maybe im procrastinating idk xD
+                  </p>
+                  <div class="attendance-meter-wrap">
+                    <div class="meter-labels">
+                      <span>College Attendance Meter</span>
+                      <span class="meter-pct">75.0%</span>
+                    </div>
+                    <div class="meter-bar-track">
+                      <div class="meter-bar-fill"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-bottom-bar back-bar">
+                  <span class="badge-mini">BINGE_TECH: 100%</span>
+                  <span class="badge-mini highlight">ATTENDANCE: 75% TARGET</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================================================== -->
+      <!-- 2. TEASER SCRIPT TEXT SECTION (Normal Clean Font with Light Emission) -->
+      <!-- ==================================================== -->
+      <section class="teaser-section">
+        <div class="teaser-container">
+          <div class="teaser-ambient-glow"></div>
+          <div class="teaser-quote-wrap">
+            <p class="teaser-quote-text emitting-light">
+              "but watch out, a whole lot more coming..."
+            </p>
+          </div>
+          <div class="teaser-subline faint-light">
+            <span>PREPARING FOR DEEP LEARNING ARCHITECTURES • REAL-WORLD AI SYSTEMS</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================================================== -->
+      <!-- 3. ABOUT ME (Persona Orbit with Visible Tracks & Spacetime Nucleus) -->
+      <!-- ==================================================== -->
+      <section class="section-container about-section" id="about-section">
+        <div class="section-header center">
+          <div class="section-tag">
+            <span class="section-num">02</span>
+            <span class="section-tag-line"></span>
+            <span class="section-tag-name">PERSONA MATRIX</span>
+          </div>
+          <h2 class="section-title faint-light">About Me // Core Attributes</h2>
+          <p class="section-subtitle">Interact with the orbital gravitational nodes surrounding the central nucleus</p>
+        </div>
+
+        <div class="radial-orbit-wrapper" id="radial-orbit-system">
+          
+          <!-- Highly Visible Glowing Orbit Tracks -->
+          <svg class="orbit-svg-tracks" viewBox="0 0 600 600" aria-hidden="true">
+            <defs>
+              <linearGradient id="orbit-grad-visible" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.45" />
+                <stop offset="50%" stop-color="#D84315" stop-opacity="0.3" />
+                <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.45" />
+              </linearGradient>
+            </defs>
+            <circle class="orbit-circle ring-outer visible-track" cx="300" cy="300" r="235"></circle>
+            <circle class="orbit-circle ring-middle visible-track" cx="300" cy="300" r="165"></circle>
+            <circle class="orbit-circle ring-inner visible-track" cx="300" cy="300" r="100"></circle>
+          </svg>
+
+          <!-- Central Aesthetic Hub / Spacetime Bending Nucleus -->
+          <div class="central-singularity-hub spacetime-nucleus" id="central-hub" title="Soumyadip's Core Nucleus">
+            <div class="hub-gravity-distortion-ring"></div>
+            <div class="hub-core-pulse"></div>
+            <div class="hub-photon-ring"></div>
+            <div class="hub-inner-symbol">
+              <span class="hub-initials">SS</span>
+            </div>
+            <div class="hub-label">NUCLEUS</div>
+          </div>
+
+          <!-- 4 Orbiting Nodes -->
+          <div class="orbit-nodes-container" id="orbit-nodes-group">
+            
+            <!-- Node 1: Hungry -->
+            <div class="orbit-node node-top" data-index="0" tabindex="0">
+              <div class="node-card">
+                <div class="node-icon-bubble">
+                  <span class="node-emoji">🔥</span>
+                </div>
+                <div class="node-body">
+                  <span class="node-tag">DRIVE // 01</span>
+                  <h4 class="node-text">"I am hungry"</h4>
+                  <p class="node-desc">Relentless appetite for new challenges, cutting-edge AI breakthroughs, and engineering solutions that matter.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Node 2: Grind gears -->
+            <div class="orbit-node node-right" data-index="1" tabindex="0">
+              <div class="node-card">
+                <div class="node-icon-bubble">
+                  <span class="node-emoji">⚙️</span>
+                </div>
+                <div class="node-body">
+                  <span class="node-tag">RESILIENCE // 02</span>
+                  <h4 class="node-text">"I am willing to grind my gears to achieve my goals (even though I fail sometimes xD)"</h4>
+                  <p class="node-desc">Failure is just backpropagation. Iterating relentlessly through bugs and setbacks with a growth mindset.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Node 3: Chill & Friendly -->
+            <div class="orbit-node node-bottom" data-index="2" tabindex="0">
+              <div class="node-card">
+                <div class="node-icon-bubble">
+                  <span class="node-emoji">☕</span>
+                </div>
+                <div class="node-body">
+                  <span class="node-tag">VIBES // 03</span>
+                  <h4 class="node-text">"I am chill and friendly"</h4>
+                  <p class="node-desc">Approachable, curious collaborator who enjoys uplifting teammates and having fun while building cool tech.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Node 4: Meet new people & CSE perspectives -->
+            <div class="orbit-node node-left" data-index="3" tabindex="0">
+              <div class="node-card">
+                <div class="node-icon-bubble">
+                  <span class="node-emoji">🌐</span>
+                </div>
+                <div class="node-body">
+                  <span class="node-tag">GROWTH // 04</span>
+                  <h4 class="node-text">"I want to meet new people and learn different perspectives about CSE and life in general"</h4>
+                  <p class="node-desc">Always excited to connect with fellow devs, mentors, researchers, and thinkers across diverse fields.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Orbit Motion Controls -->
+          <div class="orbit-interaction-bar">
+            <button id="orbit-spin-toggle" class="orbit-ctrl-btn" title="Toggle Celestial Orbit Motion">
+              <span class="orbit-spin-icon">⟳</span>
+              <span id="orbit-spin-text">ORBIT: ACTIVE</span>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================================================== -->
+      <!-- 4. MINIMALIST FOOTER                                 -->
+      <!-- ==================================================== -->
+      <footer class="portfolio-footer">
+        
+        <div class="footer-divider-glow"></div>
+
+        <div class="footer-content">
+          <div class="footer-main-text">
+            <h3 class="footer-warm-message faint-light">"Hope you enjoyed my little beginner portfolio :)"</h3>
+          </div>
+
+          <div class="footer-details">
+            <p class="footer-author">Crafted with precision & passion by <strong>Soumyadip Sarkar</strong></p>
+            <p class="footer-tech-stack">HTML5 • Spacetime Gravitational Canvas Engine • Procedural Audio Engine</p>
+          </div>
+
+          <div class="footer-action-buttons">
+            <button id="footer-restart-btn" class="footer-action-btn primary" title="Return to interactive Singularity">
+              <span>✦ RETURN TO SINGULARITY</span>
+            </button>
+            <a href="#page-main" id="scroll-top-btn" class="footer-action-btn secondary" title="Scroll to top">
+              <span>↑ TOP OF PAGE</span>
+            </a>
+          </div>
+
+          <div class="footer-bottom-line">
+            <span>© 2026 SOUMYADIP SARKAR // 1ST YEAR B.TECH CSE</span>
+            <span class="live-time-indicator" id="live-time-display">UTC --:--:-- // SINGULARITY_ONLINE</span>
+          </div>
+        </div>
+
+      </footer>
+
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="audio.js"></script>
+  <script src="particles.js"></script>
+  <script src="blackhole.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>
